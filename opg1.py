@@ -2,7 +2,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 
-def f(x):
+def d(x):
     return (np.e)**x - 5*x
 
 
@@ -30,13 +30,13 @@ def showres(f):
     df = derivert(f, xes, h)
 
     plt.plot(xes, func, label='f(x)')
-    plt.plot(xes, df, label='f(x)')
+    plt.plot(xes, df, label="f'(x)")
     plt.xlabel('x')
     plt.grid('both')
     plt.legend()
     plt.show()
 
 
-showres(f)
+showres(d)
 showres(g)
 showres(i)
