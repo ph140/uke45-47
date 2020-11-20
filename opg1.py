@@ -18,10 +18,10 @@ def derivert(f, x, h):
     return ((f(x+h)-f(x))/h)
 
 
-h = 0.001
+h = 0.01
 xmin = 2
 xmax = 5
-N = int((xmax - xmin)/h)+1
+N = int((xmax - xmin)/h)
 xes = np.linspace(xmin, xmax, N)
 
 
@@ -29,8 +29,8 @@ def showres(f):
     func = f(xes)
     df = derivert(f, xes, h)
 
-    plt.plot(xes, func, label='f(x)')
-    plt.plot(xes, df, label="f'(x)")
+    plt.plot(xes, func, label='f (x)')
+    plt.plot(xes, df, label="f' (x)")
     plt.xlabel('x')
     plt.grid('both')
     plt.legend()
