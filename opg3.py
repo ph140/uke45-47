@@ -1,5 +1,4 @@
-from numpy import linspace, sqrt, pi, e
-from matplotlib import pyplot as plt
+from numpy import sqrt, pi, e
 
 
 def f(x):
@@ -35,9 +34,9 @@ def trapesmetoden(f, a, b, N):
 
 def res(h):
     for k in range(1, 4):
-        N = int((k*2)/h)
-        rek = rektangelmetoden(f, -k, k, N)
-        trapes = trapesmetoden(f, -k, k, N)
+        N = int((k*2)/h)+1
+        rek = round(rektangelmetoden(f, -k, k, N), 2)
+        trapes = round(trapesmetoden(f, -k, k, N), 2)
         print(f"k={k}, h={h}")
         print(f"Rektangelmetoden: {rek}")
         print(f"Trapesmetoden: {trapes}\n")
