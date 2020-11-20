@@ -4,7 +4,6 @@ from matplotlib import pyplot as plt
 
 data = np.loadtxt('vogn.txt', float, skiprows=1)
 time = []
-position = []
 speed1 = []
 speed2 = []
 
