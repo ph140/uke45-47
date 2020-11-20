@@ -5,8 +5,6 @@ data = np.loadtxt('fallskjerm.txt', float, skiprows=1)
 
 speedlist = [0]
 timelist = [0]
-
-
 S = 0
 
 for i, _ in enumerate(data[:-1]):
@@ -23,7 +21,6 @@ for i, _ in enumerate(data[:-1]):
     speedlist.append(A+speedlist[i])
     S += A
 
-plt.plot(timelist, speedlist, 'r--')
+plt.plot(timelist, speedlist, 'b-')
 plt.show()
 print(S)
-# trapesmetoden(f, a, b, N)
