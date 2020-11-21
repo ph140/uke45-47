@@ -45,7 +45,7 @@ def res(h):
         with open('normalfordeling.txt', 'a') as file:
             file.write(f'k={k}, h={h}\n')
             file.write(f'Rektangelmetoden: {rek}\n')
-            file.write(f'Trapesmetoden: {trapes}\n')
+            file.write(f'Trapesmetoden: {trapes}\n\n')
 
         # print(f"k={k}, h={h}")
         # print(f"Rektangelmetoden: {rek}")
