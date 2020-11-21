@@ -1,6 +1,7 @@
 from numpy import sqrt, pi, e
 
 
+# Standard normalfordeling
 def f(x):
     return (1/sqrt(2*pi)) * e**((-x**2)/2)
 
@@ -32,14 +33,23 @@ def trapesmetoden(f, a, b, N):
     return S
 
 
+with open('normalfordeling.txt', 'w') as _:
+    pass
+
+
 def res(h):
     for k in range(1, 4):
         N = int((k*2)/h)+1
         rek = round(rektangelmetoden(f, -k, k, N), 2)
         trapes = round(trapesmetoden(f, -k, k, N), 2)
-        print(f"k={k}, h={h}")
-        print(f"Rektangelmetoden: {rek}")
-        print(f"Trapesmetoden: {trapes}\n")
+        with open('normalfordeling.txt', 'a') as file:
+            file.write(f'k={k}, h={h}\n')
+            file.write(f'Rektangelmetoden: {rek}\n')
+            file.write(f'Trapesmetoden: {trapes}\n')
+
+        # print(f"k={k}, h={h}")
+        # print(f"Rektangelmetoden: {rek}")
+        # print(f"Trapesmetoden: {trapes}\n")
 
 
 res(0.1)
