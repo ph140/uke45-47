@@ -33,7 +33,6 @@ for i, _ in enumerate(data[:-1]):
     trapesliste.append(A_trapes+trapesliste[i])
     rektliste.append(A_rekt+rektliste[i])
 
-
 # Plotter trapesmetoden og rektangelmetoden
 plt.plot(timelist, trapesliste, 'b-')
 plt.title('Trapesmetoden')
